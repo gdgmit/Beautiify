@@ -738,7 +738,7 @@ footer {
 }
 
 .footer-ul {
-    justify-items: start;
+    justify-items: center;
     align-items: start;
     text-align: center;
 }
