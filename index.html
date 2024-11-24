@@ -15,6 +15,19 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./assets/js_files/hamburgerMenu.js"></script>
     <title>Beautiify</title>
+    <script>
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            const button = document.getElementById('dark-mode-toggle');
+            if (body.classList.contains('dark-mode')) {
+                button.innerHTML = "🌞 Switch to Light Mode";
+            } else {
+                button.innerHTML = "🌙 Switch to Dark Mode";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -49,6 +62,7 @@
         <div class="circle" style="background-color: rgb(124, 0, 96); left: 504px; top: 59px; scale: 0.15;"></div>
         <div class="circle" style="background-color: rgb(104, 0, 96); left: 504px; top: 59px; scale: 0.1;"></div>
         <div class="circle" style="background-color: rgb(96, 0, 95); left: 504px; top: 59px; scale: 0.05;"></div>
+        
     </div>
 
     <header class="header1">
@@ -80,7 +94,8 @@
                     <a href="./assets/html_files/FAQ.html" class="nav-link"><i class="fa-solid fa-phone"></i> FAQ</a>
                 </li>
             </ul>
-            <button id="dark-mode-toggle"></button>
+            
+            <button id="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Switch to Dark Mode</button>
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
